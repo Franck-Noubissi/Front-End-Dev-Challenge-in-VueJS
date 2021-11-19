@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.container {
+  max-width: 1024px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+
+img {
+  transition: transform 0.2s;
+  transition: all 0.8s ease-in-out;
+  width: 100%;
+  border-radius: 8px;
+  height: 500px;
+  opacity: 0.8;
+}
+
+.card:hover img {
+  transform: scale(1.01);
+  cursor: pointer;
+  opacity: 1;
+}
+
+.card-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 7px;
+  margin-top: 50px;
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 4px;
+  display: none;
+  transition: background-color 1s ease-in-out, color 1s ease-in-out;
+}
+
+button:hover {
+  background-color: rgba(65, 105, 225, 0.8);
+  color: white;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: royalblue;
+  transform: translateY(1px);
+}
+
+/* First block */
+.first {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  margin-top: 10px;
+}
+
+.first > .card > .card-details > .subtitle > h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.first > .card > picture > img {
+  height: 350px;
+}
+
+.first > .card > .card-details > .description {
+  display: none;
+}
+
+.first > .card:hover .description {
+  animation: transition 2s;
+  display: block;
+}
+
+.first > .card:hover button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  animation: transition 2s;
+}
+
+/* Second block */
+.second {
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  margin-top: 10px;
+}
+
+.second > .card > .card-details > .subtitle > h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.second > .card > picture > img {
+  height: 350px;
+}
+
+.second > .card > .card-details > .description {
+  display: none;
+}
+
+.second > .card:hover .description {
+  display: block;
+  animation: transition 2s;
+}
+
+.second > .card:hover button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  animation: transition 2s;
+}
+
+/* FadeIn animation */
+@keyframes transition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .card {
+    padding: 5px;
+  }
+
+  img {
+    height: auto;
+  }
+
+  .first {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .first > .card > .card-details > .title > h1 {
+    font-size: 13px;
+  }
+
+  .first > .card > .card-details > .subtitle > h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .second {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .second > .card > .card-details > .title > h1 {
+    font-size: 13px;
+  }
+
+  .second > .card > .card-details > .subtitle > h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .first {
+    display: block;
+    margin-top: 10px;
+  }
+
+  img {
+    height: 300px;
+  }
+
+  .first > .card > picture > img {
+    height: 350px;
+  }
+
+  .first > .card > .card-details > .title > h1 {
+    font-size: 10px;
+  }
+
+  .first > .card > .card-details > .subtitle > h2 {
+    font-size: 18px;
+  }
+
+  .first > .card > .card-details > .subtitle > h2 {
+    font-size: 25px;
+  }
+
+  .second {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .second > .card > picture > img {
+    height: 350px;
+  }
+
+  .second > .card > .card-details > .title > h1 {
+    font-size: 10px;
+  }
+
+  .second > .card > .card-details > .subtitle > h2 {
+    font-size: 25px;
+  }
+}
